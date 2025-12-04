@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost — Mi Historia y Juegos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #eee;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #222;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #0f0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #7fff7f;
+        }
+
+        /* SECCIONES */
+        .section {
+            display: none;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            color: #7fff7f;
+        }
+
+        /* GALERÍA BÁSICA */
+        .galeria img {
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid #0f0;
+        }
+
+        /* JUEGOS LISTADO */
+        .juego {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0f0;
+        }
+    </style>
+
+    <script>
+        function mostrar(seccion) {
+            document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+            document.getElementById(seccion).classList.add("active");
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+    <nav>
+        <a href="#" onclick="mostrar('inicio')">Inicio</a>
+        <a href="#" onclick="mostrar('historia')">Mi Historia</a>
+        <a href="#" onclick="mostrar('galeria')">Galería</a>
+        <a href="#" onclick="mostrar('juegos')">Juegos</a>
+        <a href="#" onclick="mostrar('contacto')">Contacto</a>
+    </nav>
+
+    <!-- INICIO -->
+    <div id="inicio" class="section active">
+        <h1>Bienvenido a la web de Ghost</h1>
+        <p>
+            Soy Ghost, artista digital y pintor desde los 13 años.  
+            Este es mi sitio donde puedes ver mis dibujos, mi historia y algunos juegos cool.
+        </p>
+    </div>
+
+    <!-- HISTORIA -->
+    <div id="historia" class="section">
+        <h1>Cómo me convertí en pintor a los 13</h1>
+        <p>
+            Todo empezó cuando tenía 13 años. Ya me gustaba dibujar, pero ese año descubrí 
+            la pintura digital y programas como <strong>Krita</strong>.
+        </p>
+        <p>
+            Cada día practicaba un poco más. Mis dibujos no eran perfectos, pero tenía ganas 
+            de mejorar. Con el tiempo, mi estilo fue tomando forma.
+        </p>
+        <p>
+            Hoy sigo mejorando, aprendiendo y disfrutando cada pintura que hago.
+        </p>
+        <p>— Ghost 🎨</p>
+    </div>
+
+    <!-- GALERÍA -->
+    <div id="galeria" class="section galeria">
+        <h1>Mi Galería</h1>
+        <p>Puedes subir imágenes aquí cuando quieras:</p>
+        <img src="https://via.placeholder.com/250" alt="Dibujo 1">
+        <img src="https://via.placeholder.com/250" alt="Dibujo 2">
+        <img src="https://via.placeholder.com/250" alt="Dibujo 3">
+    </div>
+
+    <!-- JUEGOS -->
+    <div id="juegos" class="section">
+        <h1>Juegos Interactivos</h1>
+
+        <div class="juego">
+            <h2>🎮 Juego 1: Pixel Runner</h2>
+            <p>Juego estilo pixel art (puedo hacerlo para ti si quieres).</p>
+            <a style="color:#0f0;" href="#">Jugar</a>
+        </div>
+
+        <div class="juego">
+            <h2>🎲 Juego 2: Memory Cards</h2>
+            <p>Encuentra las parejas. Puedo crear la versión con tus dibujos.</p>
+            <a style="color:#0f0;" href="#">Jugar</a>
+        </div>
+
+        <div class="juego">
+            <h2>🧩 Juego 3: Rompecabezas</h2>
+            <p>Convierte cualquier imagen en un puzzle interactivo.</p>
+            <a style="color:#0f0;" href="#">Jugar</a>
+        </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div id="contacto" class="section">
+        <h1>Contacto</h1>
+        <p>Puedes encontrarme en mis redes (puedo agregarlas si me dices cuáles usas).</p>
+        <p>Correo (opcional): contacto@example.com</p>
+    </div>
+
+</body>
+  </html>
